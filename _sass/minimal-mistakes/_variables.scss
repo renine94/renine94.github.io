@@ -153,12 +153,12 @@ $x-large: 1280px !default;
 $max-width: $x-large !default;
 
 /*
-   Grid
+   Grid ( 본문 넓이 수정 )
    ========================================================================== */
 
-$right-sidebar-width-narrow: 200px !default;
-$right-sidebar-width: 300px !default;
-$right-sidebar-width-wide: 400px !default;
+$right-sidebar-width-narrow: 100px !default;  // 200
+$right-sidebar-width: 200px !default;  // 300
+$right-sidebar-width-wide: 400px !default;  // 400
 
 /*
    Other
