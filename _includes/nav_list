@@ -21,8 +21,9 @@
         {% if nav.children != null %}
         <ul>
           {% for child in nav.children %}
-          {% assign category = site.categories[child.category] | where_exp: "item", "item.hidden != true" %}
-            <li><a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>{{ child.title }} {{ child.category.size }} {{ child.category }}</a></li>
+            <!-- Ruby Template Language: [Liquid] 문법 https://shopify.github.io/liquid/ -->
+            {% assign category = child.title %}
+            <li><a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>{{ child.title }} ({{ site.categories[category].size | default: 0 }})</a></li>
           {% endfor %}
         </ul>
         {% endif %}
