@@ -9,27 +9,13 @@ main:
 
 # sidebar - navigation bar - 왼쪽 패널에 링크 걸어 둘 수 있다.
 docs:
-  - title: Database
+  - title: Develop
     children:
-      - title: "Oracle"
-        url: oracle/
-        category: "oracle"
-      - title: "MS-SQL"
-        url: mssql/
-        category: "mssql"
-      - title: "MariaDB"
-        url: mariadb/
-        category: "mariadb"
-  - title: Server
-    children:
-      - title: "Ubuntu"
-        url: ubuntu/
-        category: "ubuntu"
-      - title: "Windows Server"
-        url: windows-server/
-        category: "windows-server"
+      - title: "Django"
+        url: /django/
+        category: "/django/"
   - title: Etc
     children:
-      - title: "Jekyll"
-        url: jekyll/
-        category: "jekyll"
+      - title: "Book"
+        url: /book/
+        category: "/book/"
