@@ -16,8 +16,14 @@ docs:
       - title: "django"
         url: /django/
         category: "/django/"
+      - title: "aws"
+        url: /aws/
+        category: "/aws/"
   - title: etc
     children:
       - title: "book"
         url: /book/
         category: "/book/"
+      - title: "util"
+        url: /util/
+        category: "/util/"

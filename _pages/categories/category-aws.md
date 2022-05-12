@@ -1,12 +1,12 @@
 ---
-title: "📕 도서 포스팅 모음"
+title: "☁️ AWS 포스팅 모음"
 layout: archive
-permalink: /book/
+permalink: /aws/
 author_profile: true
 sidebar:
   nav: "docs"
 ---
 
 
-{% assign posts = site.categories.book %}
+{% assign posts = site.categories.aws %}
 {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}

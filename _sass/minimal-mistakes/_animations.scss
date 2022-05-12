@@ -19,3 +19,34 @@
     opacity: 1;
   }
 }
+
+#shadowBox {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.rainbow {
+  text-align: center;
+  text-decoration:solid;
+  font-size: 16px;
+  letter-spacing: 2px;
+  animation: colorRotate 2.5s linear 0s infinite;
+}
+
+@keyframes colorRotate {
+  from {
+    color: #6666ff;
+  }
+  10% {
+    color: #0099ff;
+  }
+  50% {
+    color: #3f523f;
+  }
+  75% {
+    color: #ff335c;
+  }
+  100% {
+    color: #6666ff;
+  }
+}
