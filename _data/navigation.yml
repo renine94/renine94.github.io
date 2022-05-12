@@ -9,25 +9,27 @@ main:
 
 # sidebar - navigation bar - 왼쪽 패널에 링크 걸어 둘 수 있다.
 docs:
-  - title: "대목차1"
+  - title: Database
     children:
-      - title: "Category"
-        url: /categories/
-      - title: "Tag"
-        url: /tags/
-
-  - title: "대목차2"
+      - title: "Oracle"
+        url: oracle/
+        category: "oracle"
+      - title: "MS-SQL"
+        url: mssql/
+        category: "mssql"
+      - title: "MariaDB"
+        url: mariadb/
+        category: "mariadb"
+  - title: Server
     children:
-      - title: "Category"
-        url: /categories/
-      - title: "Tag"
-        url: /tags/
-
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+      - title: "Ubuntu"
+        url: ubuntu/
+        category: "ubuntu"
+      - title: "Windows Server"
+        url: windows-server/
+        category: "windows-server"
+  - title: Etc
+    children:
+      - title: "Jekyll"
+        url: jekyll/
+        category: "jekyll"
