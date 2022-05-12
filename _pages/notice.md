@@ -3,6 +3,9 @@ title: 공지사항
 layout: single
 permalink: /notice/
 author_profile: true
+sidebar_main: true
+sidebar:
+  nav: "docs"
 ---
 
 <div class="notice--success">

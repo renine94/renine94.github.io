@@ -11,13 +11,13 @@ main:
 
 # sidebar - navigation bar - 왼쪽 패널에 링크 걸어 둘 수 있다.
 docs:
-  - title: Develop
+  - title: develop
     children:
-      - title: "Django"
+      - title: "django"
         url: /django/
         category: "/django/"
-  - title: Etc
+  - title: etc
     children:
-      - title: "Book"
+      - title: "book"
         url: /book/
         category: "/book/"
