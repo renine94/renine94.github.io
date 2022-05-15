@@ -104,7 +104,7 @@ analytics:
 # URL 변경하고 싶으면 https://fontawesome.com/v4/icons/ 참고할 것
 author:
   name             : "🤔 강재구"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/logo/me.gif"
   bio              : "Backend Engineer <br><small><b>since 2020</b></small>"
   location         : "Incheon & Seoul"
   email            :
