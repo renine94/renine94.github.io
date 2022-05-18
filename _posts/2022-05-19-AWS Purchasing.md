@@ -10,11 +10,11 @@ header:
     - label: "Github"
       url: "https://github.com/renine94"
 
-title: "[aws] EC2 Purchasing"
-excerpt: "🚀 Purchasing Option 알아보기!"
+title: "[aws] EC2 Purchasing & Spot Instance"
+excerpt: "🚀 Purchasing Option, Spot Instance 알아보기!"
 
 categories: aws
-tag: [aws, ec2, cloud]
+tag: [aws, ec2, spot, cloud]
 
 toc: true
 toc_label: "📕 목차"
@@ -37,7 +37,7 @@ sidebar:
 
 
 
-## 1. Options
+## 🚀 Options
 
 - On-Demand Instance
 - Reserved
@@ -121,7 +121,7 @@ sidebar:
 
 
 
-## 02. 어떤 Purchasing option 이 나에게 맞을까?
+## 🚀 어떤 Purchasing option 이 나에게 맞을까?
 
 ![image-20220519020758448](/assets/images/posts/2022-05-19-AWS Purchasing/image-20220519020758448.png)
 
@@ -136,3 +136,78 @@ sidebar:
   - 리조트 전체를 혼자서 예약
 - ~~Capacity Reservations~~
   - Deprecated
+
+
+
+
+
+# 02. Spot Instance - Deep Dive!
+
+> 스팟 인스턴스를 제대로 알아보자!
+
+- 스팟 인스턴스를 사용하면 온디멘드와 비교해 최대 90% 할인
+- 최고가를 정의해두고 `현재가격 < 최고가` 동안 계속 인스턴스를 사용할 수 있다.
+- 만약 `현재가격 > 최고가` 상태가 되면, 2분의 유예기간 동안 2가지 옵션중 선택 할 수 있다.
+  - **중단**  - 하고있던 모든 작업 중단후 인스턴스 중단후 다시 `현재가격 < 최고가` 상태가 되면 인스턴스를 받고 작업을 계속 이어서 한다.
+  - **종료**  - 업무를 재시작할때마다 완전히 새로운 인스턴스를 띄운다.
+- ~~스팟 블록~~
+  - ~~미사용 Deprecated~~
+- 실패해도 상관없는 단발성 작업에 스팟인스턴스를 사용하는것이 좋다.
+  - 데이터베이스와 같은곳에 사용해서는 안된다.
+
+
+
+### Pricing
+
+![image-20220519022945609](/assets/images/posts/2022-05-19-AWS Purchasing/image-20220519022945609.png)
+
+- 1개의 Region 에 6개의 AZ 이 있다면 가격도 6개가 된다.
+- 온디멘드는 시간당 0.1달러
+- 스팟인스턴스는 시간당 평균 0.45달러
+- 만약 내가 최고가를 0.5달러로 해놓는다면 스팟인스턴스를 계속해서 사용할 수 있을 것
+  - 온디맨드보다 그래도 더 저렴하다.
+
+
+
+### How to terminate Spot Instances?
+
+> 스팟 인스턴스는 어떻게 종료하는지 알아보자
+
+스팟인스턴스 요청 종류
+
+- 일회성
+  - 한번 요청하면 그다음부턴 요청하지 않는다.
+- 지속성
+  - 지속해서 요청해서 중간에 회수되어도 다시 요청하게 된다.
+
+*<u>스팟 요청을 취소하게 되면 기존에 실행중이던 스팟 인스턴스는 종료가 되지 않는다.</u>*
+
+그러므로 완전히 스팟인스턴스를 종료하기 위해서는
+
+1. 스팟 요청을 먼저 중단한다.
+2. 연결중인 또는 실행중인 스팟인스턴스를 종료시킨다.
+
+
+
+### Spot Fleets
+
+> 극강의 비용 절감을 위한 방법
+>
+> 한 세트의 스팟 인스턴스에다가 선택적으로 온디맨드 인스턴스를 조합해 사용하는 방식
+
+집합이라는 뜻의 Fleet
+
+**스팟플릿은 우리가 자동으로 스팟인스턴스 요청을 가장 낮은 비용으로 하게 해준다.**
+
+자동으로 가용영역, 용량등을 지정하게 된다.
+
+![image-20220519024023418](/assets/images/posts/2022-05-19-AWS Purchasing/image-20220519024023418.png)
+
+
+
+
+
+# 03. EC2 - Summary
+
+![image-20220519031623162](/assets/images/posts/2022-05-19-AWS Purchasing/image-20220519031623162.png)
+
