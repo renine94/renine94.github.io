@@ -201,11 +201,9 @@ sidebar:
 
 자동으로 가용영역, 용량등을 지정하게 된다.
 
-![image-20220519024023418](/assets/images/posts/2022-05-19-AWS Purchasing/image-20220519024023418.png)
+![image-20220519031940677](/assets/images/posts/2022-05-19-AWS Purchasing/image-20220519031940677.png)
 
-
-
-
+<br>
 
 # 03. EC2 - Summary
 
