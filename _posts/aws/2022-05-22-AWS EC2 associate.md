@@ -11,7 +11,7 @@ header:
       url: "https://github.com/renine94"
 
 title: "[aws] EC2 Associate"
-excerpt: "🚀 IP, Placement Groups, ENI 알아보기!"
+excerpt: "🚀 IP, Placement Groups, ENI"
 
 categories: aws
 tag: [aws, ec2, ip, cloud]

@@ -11,7 +11,7 @@ header:
       url: "https://github.com/renine94"
 
 title: "[aws] EC2 Purchasing & Spot Instance"
-excerpt: "🚀 Purchasing Option, Spot Instance 알아보기!"
+excerpt: "🚀 Purchasing Option, Spot Instance"
 
 categories: aws
 tag: [aws, ec2, spot, cloud]
