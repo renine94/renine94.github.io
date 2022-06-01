@@ -241,7 +241,8 @@ to be continue..
   - 비동기 이벤트 기반의 구조와 다수의 연결을 효과적으로 처리 가능한 웹 서버
   - 주로 Node.js, Django 등 서버 앞단의 프록시 서버로 활용됩니다.
 
-![image-20220522172120279](/assets/images/posts/2022-05-12-면접을 위한 CS 전공지식 노트 (1)/image-20220522172120279.png)
+![image-20220602022535598](/assets/images/posts/2022-05-12-csNoteForInterview01/image-20220602022535598.png)
+
 
 
 
