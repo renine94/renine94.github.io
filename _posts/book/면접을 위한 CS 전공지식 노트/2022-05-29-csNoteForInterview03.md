@@ -40,7 +40,7 @@ sidebar:
 
 네트워크란 노드(node)와 링크(link)가 서로 연결되어 있거나 연결되어 있지 않은 집합을 의미<br> (알고리즘 그래프 이론과 비슷)
 
-<img src="/assets/images/posts/2022-05-29-면접을 위한 CS 전공지식 노트 (3)/image-20220529163356383.png" alt="image-20220529163356383" style="zoom:50%;" />
+<img src="../../../assets/images/posts/2022-05-29-csNoteForInterview03/image-20220602023416668.png" alt="image-20220602023416668" style="zoom:50%;" />
 
 
 
