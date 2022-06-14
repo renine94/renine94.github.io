@@ -10,11 +10,11 @@ header:
     - label: "Github"
       url: "https://github.com/renine94"
 
-title: "[aws] EC2 ELB - CrossZone LoadBalancing"
+title: "[aws] ELB - CrossZone LoadBalancing"
 excerpt: "🚀 CrossZone LoadBalancing"
 
 categories: aws
-tag: [aws, elb, sticky, session]
+tag: [aws, elb, crossZone]
 
 toc: true
 toc_label: "📕 목차"

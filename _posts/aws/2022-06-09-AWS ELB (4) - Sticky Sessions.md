@@ -10,7 +10,7 @@ header:
     - label: "Github"
       url: "https://github.com/renine94"
 
-title: "[aws] EC2 ELB - Sticky Sessions"
+title: "[aws] ELB - Sticky Sessions"
 excerpt: "🚀 sticky session, session affinity"
 
 categories: aws

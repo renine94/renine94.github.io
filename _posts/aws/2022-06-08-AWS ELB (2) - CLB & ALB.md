@@ -10,7 +10,7 @@ header:
     - label: "Github"
       url: "https://github.com/renine94"
 
-title: "[aws] EC2 ELB - CLB & ALB"
+title: "[aws] ELB - CLB & ALB"
 excerpt: "🚀 Classic/Application Load Balancer"
 
 categories: aws

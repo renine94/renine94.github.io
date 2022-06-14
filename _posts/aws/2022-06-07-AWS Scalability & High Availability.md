@@ -10,7 +10,7 @@ header:
     - label: "Github"
       url: "https://github.com/renine94"
 
-title: "[aws] EC2 고가용성 및 스케일링"
+title: "[aws] 고가용성 및 스케일링"
 excerpt: "🚀 Scalability, High Availability"
 
 categories: aws
