@@ -10,7 +10,7 @@ header:
     - label: "Github"
       url: "https://github.com/renine94"
 
-title: "[aws] ASG Basic"
+title: "[aws] ASG (1) - Basic"
 excerpt: "🚀 ASG (Auto Scaling Group)"
 
 categories: aws
@@ -125,4 +125,6 @@ sidebar:
    - 인스턴스가 종료되는 경우는 로드밸런서가 헬스체크후 특정EC2가 비정상이면<br>종료후 새 인스턴스를 생성해 교체하는 판단
    - ASG 재시작이 필요없다.
    - 인스턴스의 중단도 없이, 말 그대로 해당 인스턴스 종료후 새 인스턴스 생성해서 교체한다.
+
+
 
