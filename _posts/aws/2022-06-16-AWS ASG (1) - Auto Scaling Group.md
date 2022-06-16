@@ -14,7 +14,7 @@ title: "[aws] ASG (1) - Basic"
 excerpt: "🚀 ASG (Auto Scaling Group)"
 
 categories: aws
-tag: [aws, elb, connection draining]
+tag: [aws, asg, basic, scaling]
 
 toc: true
 toc_label: "📕 목차"

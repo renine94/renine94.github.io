@@ -35,15 +35,25 @@ sidebar:
 
 
 
-**동적 스케일링 정책**
+- Dynamic Scaling Policies
+  - 동적 스케일링
+- Predictive Scaling Policies
+  - 예측 스케일링
+  - 머신러닝을 기반.. 예측을 토대로 스케일링을 수행한다.
+- Scheduled Actions
+  - 예약된 작업
 
-- Target Tracking Scaling
+
+
+## 🚀 Dynamic Scaling Policies (동적 스케일링 정책)
+
+- Target Tracking Scaling (대상 추적)
 
   - 설정하는게 대부분 쉽다.
   - 오토스케일링 그룹의 평균 CPU 사용률을 추적하여 이 수치가 일정 이상 넘어갈 때 
     - 예를들어, 나는 CPU 가 약 40% 수준일때, 오토스케일링을 활성화 하겠다.
 
-- Simple / Step Scaling
+- Simple / Step Scaling (단계/단순 스케일링)
 
   - 클라우드와치 알람이 발생할때, (예를들어 CPU > 70%) 그러면 필요개수만큼 EC2 늘린다.
   - 클라우드와치 알람이 발생할때, (예를들어 CPU < 40%) 그러면 필요개수만큼 EC2 삭제한다.
