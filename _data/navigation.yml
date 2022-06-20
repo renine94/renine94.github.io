@@ -19,6 +19,9 @@ docs:
       - title: "aws"
         url: /aws/
         category: "/aws/"
+      - title: "it"
+        url: /it/
+        category: "/it/"
   - title: etc
     children:
       - title: "book"
