@@ -11,10 +11,10 @@ header:
       url: "https://github.com/renine94"
 
 title: "[aws] ElastiCache (1) - Overview"
-excerpt: "🚀 Cache, Redis, Memcached, RabbitMQ"
+excerpt: "🚀 Cache, Redis, Memcached, Basic"
 
 categories: aws
-tag: [aws, rds, db, sql, aurora, advanced]
+tag: [aws, cache, redis, memcached, elasticache, overview]
 
 toc: true
 toc_label: "📕 목차"
