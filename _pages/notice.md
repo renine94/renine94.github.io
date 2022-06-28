@@ -8,13 +8,26 @@ sidebar:
   nav: "docs"
 ---
 
+<div class="notice--danger">
+  <h1> 2022.06.29 </h1>
+  <ul>
+    <li> 최근에는 사내에서 Django GraphQL 을 활용하여 커머스 서비스를 만들고 있습니다. </li>
+    <li> 1일 1블로깅을 마음먹었으나, 생각보다 쉽지 않네요.. </li>
+    <li> 최근에는 AWS 서비스들 다시한번 공부중이고, ES 활용해서 검색 및 추천 서비스에 관심이 있습니다.</li>
+  </ul>
+</div>
+
+
+
 <div class="notice--success">
   <h1> 2022.05.22 </h1>
   <ul>
-    <li> 최근에는 사내에서 Django를 이용한 GraphQL 을 사용하여 개발을 진행하고 있습니다. </li>
-    <li> 주말엔 가급적 포스팅을 하거나 TIL 글을 쓰려고 노력중입니다. </li>
+    <li> 이제 블로그 여기저기 떠돌아다니지 않고 여기 한곳에 정착하려고 합니다. </li>
+    <li> 제 소개는 좌측 Resume(이력서) 및 Github에 자세히 있습니다. </li>
   </ul>
 </div>
+
+
 
 <div class="notice--danger">
   <h1> 2022.05.11 </h1>
