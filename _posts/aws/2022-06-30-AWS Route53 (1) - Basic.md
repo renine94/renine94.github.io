@@ -14,7 +14,7 @@ title: "[aws] Route53 (1) - Basic & DNS"
 excerpt: "🚀 Route53, DNS, URL, IP, Record, TLD, SLD"
 
 categories: aws
-tag: [aws, route, domain, dns, tld, sld, ]
+tag: [aws, route, domain, dns, tld, sld]
 
 toc: true
 toc_label: "📕 목차"
@@ -109,9 +109,11 @@ DNS 는 Domain Name System 으로 사람에게 친숙한 **호스트 이름을 �
   6. example.com 서버는 5.6.7.8 이라고 답한다.
   7. 로컬DNS 서버는 최종 서버로 서브도메인의 DNS 서버입니다.
   8. 이는 도메인 이름 레지스트라에 의해 관리되는 서버입니다.
-     - 예를들어 Amazon Route53 등등 입니다.
-  9. **DNS 서버에 반복적으로 물어보며 가장 구체적인 답을 찾았다.**
-  10. **만약 누군가가 다시 example.com 을 물어본다면 바로 답변을 줄 수있게된다. (Local DNS 서버에 캐싱됨)**
+     - 예를들어 Amazon Route53 등등
+  9. SLD DNS Server에 example.com 을 물어보고 결과로 IP 9.10.11.12 를 얻어낸다 
+     - example.com 은 A레코드 이다.
+  10. **DNS 서버에 반복적으로 물어보며 가장 구체적인 답을 찾았다.**
+  11. **만약 누군가가 다시 example.com 을 물어본다면 바로 답변을 줄 수있게된다. (Local DNS 서버에 캐싱됨)**
 
 
 
