@@ -11,7 +11,7 @@ sidebar:
 <div class="notice--danger">
   <h1> 2022.06.29 </h1>
   <ul>
-    <li> 최근에는 사내에서 Django GraphQL 을 활용하여 커머스 서비스를 만들고 있습니다. </li>
+    <li> 최근에는 사내에서 Django GraphQL 을 활용하여 <a href="https://v.fitpetmall.com/mall">커머스 서비스</a>를 만들고 있습니다. </li>
     <li> 1일 1블로깅을 마음먹었으나, 생각보다 쉽지 않네요.. </li>
     <li> 최근에는 AWS 서비스들 다시한번 공부중이고, ES 활용해서 검색 및 추천 서비스에 관심이 있습니다.</li>
   </ul>
