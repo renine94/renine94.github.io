@@ -36,12 +36,13 @@ sidebar:
 - 일치하는 위치가 없는 경우는 기본(Default) 레코드를 생성해야 한다.
 - 사용 사례
   - 콘텐츠 분산을 제한
+  - 
   - 로드 밸런싱 등을 실행하는 웹사이트 현지화가 있다.
 - GeoLocation Record는 Health Check와 연결할 수 있다.
 
 
 
-![image-20220707023213959](../../assets/images/posts/2022-07-07-AWS Route53 (10) - Routing Policies - Geolocation/image-20220707023213959.png)
+![image-20220707023213959](../../assets/images/posts/2022-07-08-AWS Route53 (10) - Routing Policies - Geolocation/image-20220707023213959.png)
 
 
 
@@ -53,7 +54,7 @@ sidebar:
 
 ## 실습
 
-![image-20220707024700572](../../assets/images/posts/2022-07-07-AWS Route53 (10) - Routing Policies - Geolocation/image-20220707024700572.png)
+![image-20220707024700572](../../assets/images/posts/2022-07-08-AWS Route53 (10) - Routing Policies - Geolocation/image-20220707024700572.png)
 
 
 
