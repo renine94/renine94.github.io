@@ -11,10 +11,10 @@ header:
       url: "https://github.com/renine94"
 
 title: "[aws] S3 (2) - Encryption"
-excerpt: "🚀 S3 Encryption"
+excerpt: "🚀 S3 Encryption, SSE-S3, SSE-KMS, SSE-C, Client Side Encryption"
 
 categories: aws
-tag: [aws, s3, objects, encryption]
+tag: [aws, s3, objects, encryption, sse]
 
 toc: true
 toc_label: "📕 목차"
