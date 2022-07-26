@@ -10,7 +10,7 @@ header:
     - label: "Github"
       url: "https://github.com/renine94"
 
-title: "[aws] S3 (2) - Securty"
+title: "[aws] S3 (3) - Securty"
 excerpt: "🚀 S3 Security, Bucket Policies, Pre-Signed URLs"
 
 categories: aws
