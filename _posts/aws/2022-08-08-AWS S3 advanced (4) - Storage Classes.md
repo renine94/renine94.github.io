@@ -191,3 +191,4 @@ S3 버킷에 들어가면 아래와 같은 화면이 나오고 맨 오른쪽에 
 편집버튼을 누르면 위에서 배운 S3 Storage classes 들을 선택할 수 있는 화면이 나오게 된다!
 
 ![image-20220811020654097](../../assets/images/posts/2022-08-08-AWS S3 advanced (4) - Storage Classes/image-20220811020654097.png)
+
