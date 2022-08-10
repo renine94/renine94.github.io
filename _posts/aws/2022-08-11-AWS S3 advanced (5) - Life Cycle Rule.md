@@ -11,7 +11,7 @@ header:
       url: "https://github.com/renine94"
 
 title: "[aws] S3 Advanced (5) - Life Cycle Rule"
-excerpt: "🚀 S3의 수명주기 규칙에 대해 알아보자!"
+excerpt: "🚀 S3 수명주기규칙을 활용하여 Storage class를 자동 이동시켜보자!"
 
 categories: aws
 tag: [aws, s3, life, cycle, rule]
