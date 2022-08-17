@@ -6,7 +6,20 @@ author_profile: true
 sidebar_main: true
 sidebar:
   nav: "docs"
+
 ---
+
+<div class="notice--success">
+  <h1> 2022.08.18 </h1>
+  <ul>
+    <li> ElasticSearch 로 검색성능을 높이고자 학습하고싶은데,, AWS 공부가 끝이 없군요.. </li>
+    <li> Django 인력풀이 적어서,, 언젠가 Java Spring 을 배워야 하는 날이 올것 같습니다..ㅠㅠ </li>
+    <li> AWS, Infra, ES, Redis, Kafka, ECS, k8s, CI/CD 등 배워야 할게 많더미인데, 사내 백엔드 태스크 치기도 빠듯합니다..</li>
+    <li> 5월부터 블로깅을 시작해서 일주일에 최소 2-3개씩 블로깅은 하고있으나, 이게 다 머릿속에 남을지 가끔 걱정이 드네요 :( </li>
+  </ul>
+</div>
+
+
 
 <div class="notice--danger">
   <h1> 2022.06.29 </h1>
@@ -16,6 +29,7 @@ sidebar:
     <li> 최근에는 AWS 서비스들 다시한번 공부중이고, ES 활용해서 검색 및 추천 서비스에 관심이 있습니다.</li>
   </ul>
 </div>
+
 
 
 
