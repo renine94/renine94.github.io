@@ -102,7 +102,7 @@ sidebar:
 - 동적 영역 : 스택, 힙
 - 정적 영역 : 데이터영역, 코드영역
 
-![Process in Operating Systems | Studytonight](../../../assets/images/posts/2022-08-29-csNoteForInterView08/1604468593-71449.jpg)
+![Process in Operating Systems](../../../assets/images/posts/2022-08-29-csNoteForInterView08/1604468593-71449.jpg)
 
 
 
