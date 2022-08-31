@@ -11,10 +11,10 @@ header:
       url: "https://github.com/renine94"
 
 title: "[aws] All Storage Services Summary & Quiz"
-excerpt: "🚀 Storage, S3, "
+excerpt: "🚀 Storage, S3, Glacier, EFS, FSx, EBS, Instance Store, Storage Gateway, Snowball, Database"
 
 categories: aws
-tag: [aws, cloudfront, globalAccelerator, quiz]
+tag: [aws, storage, s3, quiz, summary, fsx]
 
 toc: true
 toc_label: "📕 목차"
