@@ -10,11 +10,11 @@ header:
     - label: "Github"
       url: "https://github.com/renine94"
 
-title: "[aws] Integration & Messaging (2) - SQS"
-excerpt: "🚀 Simple Queue Service"
+title: "[aws] Integration & Messaging (2) - SQS (Standard Queue)"
+excerpt: "🚀 Simple Queue Service, Queue, Producer, Consumer, Polling, Decouple"
 
 categories: aws
-tag: [aws, sqs, queue]
+tag: [aws, sqs, queue, producer, consumer, polling, decouple]
 
 toc: true
 toc_label: "📕 목차"
