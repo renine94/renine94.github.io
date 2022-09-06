@@ -35,8 +35,6 @@ sidebar:
 
 ![What Is A Process Scheduling Algorithm](../../../assets/images/posts/2022-09-06-csNoteForInterView09/1*5PiB5W4fvWEAGp56F5e8ag.png)
 
-<CPU 스케줄링 알고리즘 종류 도식화>
-
 
 
 - 프로그램이 실행될 때는 CPU스케줄링 알고리즘이 어떤 프로그램에 CPU소유권을 줄것인지 결정
