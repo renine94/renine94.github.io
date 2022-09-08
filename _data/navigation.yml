@@ -13,6 +13,9 @@ main:
 docs:
   - title: develop
     children:
+      - title: "python"
+        url: /python/
+        category: "/python/"
       - title: "django"
         url: /django/
         category: "/django/"
