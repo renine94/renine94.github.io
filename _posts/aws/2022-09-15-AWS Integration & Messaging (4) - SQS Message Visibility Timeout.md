@@ -11,7 +11,7 @@ header:
       url: "https://github.com/renine94"
 
 title: "[aws] Integration & Messaging (4) - SQS Message Visibility Timeout"
-excerpt: "🚀 Simple Queue Service, Message Visibility Timeout"
+excerpt: "🚀 Simple Queue Service, Message Visibility Timeout, 표시 제한 시간"
 
 categories: aws
 tag: [aws, sqs, queue, visibility, timeout]
