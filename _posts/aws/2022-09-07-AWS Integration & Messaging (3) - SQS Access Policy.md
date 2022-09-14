@@ -10,7 +10,7 @@ header:
     - label: "Github"
       url: "https://github.com/renine94"
 
-title: "[aws] Integration & Messaging (2) - SQS Queue Access Policy"
+title: "[aws] Integration & Messaging (3) - SQS Queue Access Policy"
 excerpt: "🚀 Simple Queue Service, Access Policy"
 
 categories: aws
