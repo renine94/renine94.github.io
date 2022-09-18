@@ -10,7 +10,7 @@ header:
     - label: "Github"
       url: "https://github.com/renine94"
 
-title: "면접을 위한 CS 전공지식 노트 (13) - 데이터베이스 인덱스"
+title: "면접을 위한 CS 전공지식 노트 (14) - 데이터베이스 인덱스"
 excerpt: "🚀 Database, RDS, Index, Cardinality, Explain"
 
 categories: book
