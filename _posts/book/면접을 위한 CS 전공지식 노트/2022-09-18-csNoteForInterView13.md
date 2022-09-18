@@ -11,7 +11,7 @@ header:
       url: "https://github.com/renine94"
 
 title: "면접을 위한 CS 전공지식 노트 (13) - 데이터베이스 종류"
-excerpt: "🚀 Database, RDS, MySQL, PostgreSQL, NoSQL, MongoDB"
+excerpt: "🚀 Database, RDS, MySQL, PostgreSQL, NoSQL, MongoDB, Redis"
 
 categories: book
 tag: [cs, db]
