@@ -11,7 +11,7 @@ header:
       url: "https://github.com/renine94"
 
 title: "[aws] Integration & Messaging (5) - SQS Dead Letter Queue"
-excerpt: "🚀 Simple Queue Service, Dead Letter Queue, DLQ,"
+excerpt: "🚀 Simple Queue Service, Dead Letter Queue, DLQ, 배달 못한 편지열"
 
 categories: aws
 tag: [aws, sqs, queue, dlq, visibility, timeout]
