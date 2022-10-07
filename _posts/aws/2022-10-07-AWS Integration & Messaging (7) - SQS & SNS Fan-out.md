@@ -11,10 +11,10 @@ header:
       url: "https://github.com/renine94"
 
 title: "[aws] Integration & Messaging (7) - SQS & SNS Fan Out"
-excerpt: "🚀 SQS, SNS, Fan Out, "
+excerpt: "🚀 SQS, SNS, Fan Out, FIFO, Kinesis Firehose"
 
 categories: aws
-tag: [aws, sns, pub/sub, message]
+tag: [aws, sqs, sns, fan-out]
 
 toc: true
 toc_label: "📕 목차"
