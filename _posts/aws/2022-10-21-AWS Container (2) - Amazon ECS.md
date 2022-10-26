@@ -11,10 +11,10 @@ header:
       url: "https://github.com/renine94"
 
 title: "[aws] Container ECS, Fargate, ECR, EKS (2) - Amazon ECS"
-excerpt: "🚀 AWS Container, ECS, Elastic Container Service, EC2, Fargate"
+excerpt: "🚀 AWS Container, ECS, Elastic Container Service, EC2, Fargate, Launch Type"
 
 categories: aws
-tag: [aws, container, docker, ecs, fargate]
+tag: [aws, container, docker, ecs, fargate, Launch Type]
 
 toc: true
 toc_label: "📕 목차"
