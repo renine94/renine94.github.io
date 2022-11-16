@@ -34,7 +34,11 @@ sidebar:
 
 
 
-코드를 작성하다보면 아래와 같이 코드를 짜는 경우가 생긴다.
+---
+
+
+
+코드를 작성하다보면 아래와 같이 코드를 짜는 경우가 생기는데,
 
 ```python
 # 기존 방식
@@ -61,6 +65,8 @@ def execute_payment(payment_type: str) -> str:
 
 이러한 코드를 아래처럼 바꾸게 되면 훨씬 코드가 간결해지는 효과를 볼 수 있다.
 
+
+
 ```python
 # 개선 방식
 payment_map = {
@@ -78,7 +84,7 @@ result = execute_payment('KAKAO_PAYMENT')
 print(result)
 ```
 
-
+<br><br>
 
 # 02. 함수 자체를 저장시켜 호출하기
 
