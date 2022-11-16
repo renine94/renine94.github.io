@@ -113,7 +113,7 @@ class Run(MoveStrategy):
 class Fly(MoveStrategy):
   def move(self):
     print('날아서 배달합니다. 삐-빅')
-
+################################
 
 class TemperatureStrategy: # Interface 역할
   def temperature(self):
@@ -133,7 +133,7 @@ class Warm(TemperatureStrategy):
 class Hot(TemperatureStrategy):
   def temperature(self):
     print('뜨겁습니다. 삐-빅')
-
+################################
 
 class SpeakStrategy:  # Interface 역할
   def speak(self):
@@ -148,7 +148,7 @@ class Korean(SpeakStrategy):
 class English(SpeakStrategy):
   def speak(self):
     print('영어 좀 함; 삐-빅')
-
+################################
 
 class Robot:
   __move_strategy: MoveStrategy = None
