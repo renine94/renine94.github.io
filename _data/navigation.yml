@@ -27,6 +27,9 @@ docs:
         category: "/it/"
   - title: etc
     children:
+      - title: "pattern"
+        url: /pattern/
+        category: "/pattern/"
       - title: "book"
         url: /book/
         category: "/book/"
