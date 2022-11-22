@@ -24,7 +24,7 @@ toc_sticky: true
 sidebar:
   nav: "docs"
 ---
-# 0. Get to the Point
+# TL;DR
 
 > **선결론 및 요약**
 >
