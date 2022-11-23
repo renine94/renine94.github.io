@@ -30,6 +30,7 @@ sidebar:
 > 검색에 최적화된 오픈소스
 >
 > [공식문서](https://www.elastic.co/guide/kr/elasticsearch/reference/current/getting-started.html) 를 참고하여 해당 내용을 포스팅합니다.
+> [무신사 데이터 사이언스 엔지니어 블로그](https://danthetech.netlify.app/Backend/basic-tutorial-of-python-package-elasticsearch-dsl/){: .btn .btn--success}
 
 ![ES](../../../assets/images/posts/2022-06-20-ElasticSearch (1)/2560px-Elasticsearch_logo.svg.png)
 
