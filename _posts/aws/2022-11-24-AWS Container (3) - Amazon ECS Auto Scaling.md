@@ -50,7 +50,9 @@ sidebar:
 - Fargate 시작유형의 Auto Scaling 이 더욱 세팅하기가 쉽다. (서버리스 이기 때문)
   - 시험에서도 Fargate 사용을 권장한다.
 
+<br><br>
 
+---
 
 # 02. EC2 LaunchType - Auto Scaling EC2 Instances
 
@@ -71,7 +73,9 @@ sidebar:
 
 ASG 와 ECS Cluster Provider 중에 LaunchType이 EC2 인 경우에는 EC2 ECS Cluster Provider 를 사용하는것을 권장한다.
 
+<br><br>
 
+---
 
 # 03. CPU Usage Example
 
