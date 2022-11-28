@@ -2,19 +2,19 @@
 layout: single
 
 header:
-  teaser: /assets/images/logo/it.jpeg
-  overlay_image: /assets/images/logo/it.jpeg
+  teaser: /assets/images/logo/elasticSearch.png
+  overlay_image: /assets/images/logo/elasticSearch.png
   overlay_filter: linear-gradient(rgba(255, 0, 0, 0.5), rgba(0, 255, 255, 0.5))
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
   actions:
     - label: "Github"
       url: "https://github.com/renine94"
 
-title: "[it] ElasticSearch (1) - Basic"
+title: "[ES] Basic"
 excerpt: "🚀 ES, ELK, OpenSearch, ElasticSearch, Basic"
 
-categories: it
-tag: [it, es, elasticsearch, elk, search]
+categories: elasticSearch
+tag: [it, es, elasticSearch, elk, search]
 
 toc: true
 toc_label: "📕 목차"

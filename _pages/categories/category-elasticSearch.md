@@ -1,12 +1,12 @@
 ---
-title: "🖥 IT 포스팅 모음"
+title: "🔍 ES 포스팅 모음"
 layout: archive
-permalink: /it/
+permalink: /elasticSearch/
 author_profile: true
 sidebar:
   nav: "docs"
 ---
 
 
-{% assign posts = site.categories.it %}
+{% assign posts = site.categories.elasticSearch %}
 {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
