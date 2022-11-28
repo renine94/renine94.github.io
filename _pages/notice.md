@@ -8,6 +8,16 @@ sidebar:
   nav: "docs"
 
 ---
+<div class="notice--danger">
+  <h1> 2022.11.29 </h1>
+  <ul>
+    <li> 최근에는 사내에서 기존에 구축되어있던 ES를 고도화하는 작업을 하고있습니다.  (using. AWS OpenSearch)<br>관련해서 ES 포스팅을 해야하는데 밀린 인강과 책을 언제 다보고 정리할 지.. 할게 너무 많군요 ㅠㅠ</li>
+    <li> 평일에 일집운동하고, 새벽에 글을 꾸준히 쓰는게 생각보다 쉽지 않네요.. (주말은 여친크리,,) </li>
+    <li> 이제 현업에서 일한지 2년이 다되어갑니다. 개발공부까지 도합하면 약 4년정도 지났군요..</li>
+    <li> Python Django를 Deep Dive 해야하는지, Java/ Kotlin SpringBoot 를 배워야하는지 항상 고민입니다.</li>
+  </ul>
+</div>
+
 
 <div class="notice--success">
   <h1> 2022.08.18 </h1>
