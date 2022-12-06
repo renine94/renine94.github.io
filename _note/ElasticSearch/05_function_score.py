@@ -2,10 +2,13 @@
 # https://heesutory.tistory.com/30
 # https://kazaana2009.tistory.com/6 (스코어 결합하기, score_mode, boost_mode)
 # https://ksk-developer.tistory.com/27
+# https://tech.buzzvil.com/blog/probability-in-es-search/
+
 
 GET /product_to_search_v5/_search
 {
     "query": {
+        # function_score 는 기본적으로 Document의 Score 계산 방식을 조작할 수 있게 해주는 쿼리이다.
         "function_score": {
             "query": {
                 "match": {
@@ -53,6 +56,7 @@ GET /product_to_search_v5/_search
             ]
         }
     },
+    # 성능이 좋지 않다. painless 문법을 사용할 수 있게 된다.
     "script_score": {
         "script": {
             "source": "cosineSimilarity(params.query_vector, 'name_vector') + 1.0",
