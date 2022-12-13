@@ -9,6 +9,7 @@ GET /product_to_search_v5/_search
 {
     "query": {
         # function_score 는 기본적으로 Document의 Score 계산 방식을 조작할 수 있게 해주는 쿼리이다.
+        # 중요!, 이미 쿼리로 인해 계산되어 나온 score점수에 다시 변화를 줄 때 사용 (weight 기반으로 다시 or 클릭횟수로 다시 점수 더 올리거나)
         "function_score": {
             "query": {
                 "match": {
