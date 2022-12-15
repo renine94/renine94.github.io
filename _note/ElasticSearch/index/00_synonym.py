@@ -1,3 +1,8 @@
+# "term: 6 x 9 was completely eliminated by analyzer"
+# edgeNgram 때문에 이 같은 현상이 나타나며, min_gram, max_gram 을 설정을 잘해줘야 한다. 스택오버플로우 댓글
+# https://stackoverflow.com/questions/72315212/elastic-search-synonym-completely-eliminated-by-analyzer
+
+
 # 유사어 필터 (토큰 필터에 정의)
 
 # PUT my-index
