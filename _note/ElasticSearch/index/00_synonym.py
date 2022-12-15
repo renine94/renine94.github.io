@@ -21,6 +21,9 @@
           "my_filter": {
             "type": "synonym",                        # 동의어(유사어)
             "synonyms_path": "analyzers/F111111111",  # aws opensearch 사용자정의 패키지 (s3 업로드후 도메인 적용 필요)
+            "synonyms": [
+              "치악, 치액, 치억 => 치약"
+            ],                                        # 유사어 사전 인라인으로 정의할때, 위에 path 둘중 하나만 사용
             "updateable": True                        # 이 옵션 정확히 어떤 의미인지 확인필요
           }
         }
