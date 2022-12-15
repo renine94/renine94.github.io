@@ -13,12 +13,12 @@
     }
   },
   "script_fields": {
-    "custom_fields": {
+    "custom_fields_1": {
       "script": {
         "source": "Math.random() * 100"
       }
     },
-    "custom_fields2": {
+    "custom_fields_2": {
       "script": {
         "source": "Math.random()"
       }
