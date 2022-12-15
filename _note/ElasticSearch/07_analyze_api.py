@@ -2,7 +2,7 @@
 # 토크나이저는 tokenizer, 토큰 필터는 filter 항목에 값으로 입력하면 된다.
 # 토크나이저는 하나만 적용되기 떄문에 바로 입력하고, 토큰필터는 여러개를 적용할 수 있기 때문에 []안에 배열 형식으로 입력한다.
 
-GET _analyze
+# GET _analyze
 {
   "text": "The quick brown fox jumps over the lazy dog",
   "tokenizer": "whitespace",
@@ -13,7 +13,7 @@ GET _analyze
   ]
 }
 
-GET _analyze
+# GET _analyze
 {
   "text": "The quick brown fox jumps over the lazy dog",
   "tokenizer": "whitespace",
@@ -34,7 +34,7 @@ GET _analyze
 # 예를 들면 whitespace 토크나이저, lowercase-stop-snowball 토큰필터들을 조합한 것이 [ snowball 애널라이저 ] 이다. 바로 사용가능
 # 사용자 정의 애널라이저의 방법으로 시도한 위의 코드와 동일한 성능
 
-GET _analyze
+# GET _analyze
 {
   "text": "The quick brown fox jumps over the lazy dog",
   "analyzer": "snowball"
@@ -58,7 +58,7 @@ PUT my_index2
 
 
 # jumps를 포함하는 도큐먼트 색인
-PUT my_index2/_doc/1
+#PUT my_index2/_doc/1
 {
   "message": "The quick brown fox jumps over the lazy dog"
 }
@@ -68,7 +68,7 @@ PUT my_index2/_doc/1
 # 입력된 검색어는 [ jumping ] 이지만 [ snowball ] 애널라이저를 거쳐 실제로는 [ jump ]로 검색한다.
 # 역 인덱스에는 [ jumps ] 가 [ jump ]로 저장되어있다.
 
-GET my_index2/_search
+#GET my_index2/_search
 {
   "query": {
     "match": {
@@ -76,3 +76,5 @@ GET my_index2/_search
     }
   }
 }
+
+
