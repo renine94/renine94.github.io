@@ -26,6 +26,7 @@ layout: default
     {%- case search_provider -%}
       {%- when "lunr" -%}
         <input type="text" id="search" class="search-input" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}" />
+        <!-- 검색에서 나온 결과가 보여지는 곳 -->
         <div id="results" class="results"></div>
       {%- when "google" -%}
         <form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">

@@ -1,3 +1,8 @@
+# AWS OpenSearch 에서 동의어 (synonym 패키지 사용하기)
+# https://docs.aws.amazon.com/ko_kr/opensearch-service/latest/developerguide/custom-packages.html
+
+
+
 # 인덱스 생성 API
 'PUT /{index_name}'
 {
