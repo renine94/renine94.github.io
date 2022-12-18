@@ -25,6 +25,11 @@ docs:
       - title: "elasticSearch"
         url: /elasticSearch/
         category: "/elasticSearch/"
+  - title: frontend
+    children:
+      - title: "typescript"
+        url: /typescript/
+        category: "/typescript/"
   - title: etc
     children:
       - title: "pattern"
