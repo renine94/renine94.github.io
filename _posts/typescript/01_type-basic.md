@@ -2,8 +2,8 @@
 layout: single
 
 header:
-  teaser: /assets/images/logo/python.jpeg
-  overlay_image: /assets/images/logo/python.jpeg
+  teaser: /assets/images/logo/typescript.png
+  overlay_image: /assets/images/logo/typescript.png
   overlay_filter: linear-gradient(rgba(255, 0, 0, 0.5), rgba(0, 255, 255, 0.5))
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
   actions:
