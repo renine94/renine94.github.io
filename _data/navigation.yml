@@ -16,28 +16,43 @@ docs:
       - title: "python"
         url: /python/
         category: "/python/"
+
       - title: "django"
         url: /django/
         category: "/django/"
+
+      - title: "java"
+        url: /java/
+        category: "/java/"
+
+      - title: "spring"
+        url: /spring/
+        category: "/spring/"
+
       - title: "aws"
         url: /aws/
         category: "/aws/"
+
       - title: "elasticSearch"
         url: /elasticSearch/
         category: "/elasticSearch/"
+
   - title: frontend
     children:
       - title: "typescript"
         url: /typescript/
         category: "/typescript/"
+
   - title: etc
     children:
       - title: "pattern"
         url: /pattern/
         category: "/pattern/"
+
       - title: "book"
         url: /book/
         category: "/book/"
+
       - title: "util"
         url: /util/
         category: "/util/"
