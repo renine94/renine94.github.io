@@ -25,5 +25,86 @@ sidebar:
   nav: "docs"
 ---
 
-# 01. Typescript
+# Typescript
+> https://joshua1988.github.io/ts/intro.html
+
+
+
+## 01. Generics
+
+> 함수에 여러가지 형태의 타입이 올수 있다.
+
+
+
+- 기존 쓰이는 방식
+
+```ts
+function logText(text) {
+  console.log(text);
+  return text
+}
+
+logText('hello world!')  // 'hello world!'
+```
+
+
+
+- Generic 을 이용한 방식
+  - `text` 파라미터에 여러가지 타입의 데이터를 넣을 수 있다.
+
+```ts
+function logText<T>(text: T): T {
+  console.log(text);
+  return text;
+}
+
+logText<string>('hello world!') // 'hello world!'
+```
+
+
+
+- Union Type
+  - 리턴값이 string, number 둘중 하나가 되므로 빌트인API 추천이 이상하게 나옴
+
+```ts
+function logText(text: string | number) {
+  console.log(text);
+  return text
+}
+
+logText('hello world!')
+logText(10)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
