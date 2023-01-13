@@ -1,5 +1,5 @@
 ---
-title: "☁️ Setting 포스팅 모음"
+title: "⚙️ Setting 포스팅 모음"
 layout: archive
 permalink: /setting/
 author_profile: true
