@@ -56,3 +56,7 @@ docs:
       - title: "util"
         url: /util/
         category: "/util/"
+
+      - title: "setting"
+        url: /setting/
+        category: "/setting/"
