@@ -13,6 +13,12 @@ $masthead-link-color: $text-color !default;
 $masthead-link-color-hover: $text-color !default;
 $navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
 
+
+
+// https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/ 참고
+// 테마에서 코드블록 색상 바꾸기 (code block change color)
+
+
 /* contrast syntax highlighting (base16) */
 // $base00: #000000 !default;
 // $base01: #242422 !default;
@@ -31,24 +37,78 @@ $navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
 // $base0e: #ff73fd !default;
 // $base0f: #b18a3d !default;
 
+/* default syntax highlighting (base16) */
+// $base00: #263238;
+// $base01: #2e3c43;
+// $base02: #314549;
+// $base03: #546e7a;
+// $base04: #b2ccd6;
+// $base05: #eeffff;
+// $base06: #eeffff;
+// $base07: #ffffff;
+// $base08: #f07178;
+// $base09: #f78c6c;
+// $base0a: #ffcb6b;
+// $base0b: #c3e88d;
+// $base0c: #89ddff;
+// $base0d: #82aaff;
+// $base0e: #c792ea;
+// $base0f: #ff5370;
+
+
 // 코드 블록 색상 드라큘라 테마로 변경
-// https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/ 참고
-$base00: #282936 !default;
-$base01: #3a3c4e !default;
-$base02: #4d4f68 !default;
-$base03: #626483 !default;
-$base04: #62d6e8 !default;
-$base05: #e9e9f4 !default;
-$base06: #f1f2f8 !default;
-$base07: #f7f7fb !default;
-$base08: #ea51b2 !default;
-$base09: #b45bcf !default;
-$base0a: #00f769 !default;
-$base0b: #ebff87 !default;
-$base0c: #a1efe4 !default;
-$base0d: #62d6e8 !default;
-$base0e: #b45bcf !default;
-$base0f: #00f769 !default;
+// $base00: #282936 !default;
+// $base01: #3a3c4e !default;
+// $base02: #4d4f68 !default;
+// $base03: #626483 !default;
+// $base04: #62d6e8 !default;
+// $base05: #e9e9f4 !default;
+// $base06: #f1f2f8 !default;
+// $base07: #f7f7fb !default;
+// $base08: #ea51b2 !default;
+// $base09: #b45bcf !default;
+// $base0a: #00f769 !default;
+// $base0b: #ebff87 !default;
+// $base0c: #a1efe4 !default;
+// $base0d: #62d6e8 !default;
+// $base0e: #b45bcf !default;
+// $base0f: #00f769 !default;
+
+/* dirt syntax highlighting (base16) */
+$base00: #231e18;
+$base01: #302b25;
+$base02: #48413a;
+$base03: #9d8b70;
+$base04: #b4a490;
+$base05: #cabcb1;
+$base06: #d7c8bc;
+$base07: #e4d4c8;
+$base08: #d35c5c;
+$base09: #ca7f32;
+$base0a: #e0ac16;
+$base0b: #b7ba53;
+$base0c: #6eb958;
+$base0d: #88a4d3;
+$base0e: #bb90e2;
+$base0f: #b49368;
+
+/* sunrise syntax highlighting (base16) */
+// $base00: #1d1f21;
+// $base01: #282a2e;
+// $base02: #373b41;
+// $base03: #969896;
+// $base04: #b4b7b4;
+// $base05: #c5c8c6;
+// $base06: #e0e0e0;
+// $base07: #ffffff;
+// $base08: #cc6666;
+// $base09: #de935f;
+// $base0a: #f0c674;
+// $base0b: #b5bd68;
+// $base0c: #8abeb7;
+// $base0d: #81a2be;
+// $base0e: #b294bb;
+// $base0f: #a3685a;
 
 
 .page__content {
