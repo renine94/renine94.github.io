@@ -38,8 +38,8 @@ GET /product_to_search_v5/_search
                 }
             ],
             "max_boost": 42,
-            "score_mode": "max",
-            "boost_mode": "multiply",
+            "score_mode": "max",        # functions 배열안에 함수들의 점수를 어떻게 계산할지 정의
+            "boost_mode": "multiply",   # score_mode로 구한 점수를 기존에 구해진 _score 와 어떻게 계산할지 정의
             "min_score": 0
         }
     }
