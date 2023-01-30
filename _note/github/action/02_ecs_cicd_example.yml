@@ -1,0 +1,163 @@
+on:
+  push:
+    branches: [rc]
+
+concurrency:
+  group: deploy_rc
+  cancel-in-progress: true
+
+name: Deploy Backend RC
+env:
+  FITPET_ENV: rc
+  IMAGE_TAG: ${{ github.sha }}
+  CLUSTER: fitpetmall-rc
+  APP_IMAGE: /fitpet/rc/mall-backend-app
+  ECR_REPO_URL: 895867684285.dkr.ecr.ap-northeast-2.amazonaws.com
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  GITHUB_URL: https://github.com/FitpetKorea
+
+jobs:
+  notify-slack-before-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Slack notify
+        if: always()
+        env:
+          TARGET: fitpetmall-backend
+          COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+          STATUS: ${{ job.status }}
+          PERIOD: start
+          SLACK_WEBHOOK_DEPLOY_URL: ${{ secrets.SLACK_WEBHOOK_DEPLOY_URL }}
+        run: sh docs/infra/script/slack_deploy_notify.sh
+
+  build-nginx-rc:
+    name: Build Nginx RC
+    runs-on: ubuntu-latest
+    needs:
+      - notify-slack-before-deploy
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v2
+        with:
+          install: true
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-northeast-2
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Build nginx image
+        id: build-image
+        run: |
+          export IMAGE_NAME=${ECR_REPO_URL}/fitpet/rc/mall-backend-nginx:latest
+          docker build -t ${IMAGE_NAME} -f ./docs/infra/nginx_v1_2/nginx.Dockerfile --push .
+          echo "::set-output name=image::${IMAGE_NAME}"
+
+  build-backend-rc:
+    name: Build Backend RC
+    runs-on: ubuntu-latest
+    needs:
+      - notify-slack-before-deploy
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v2
+        with:
+          install: true
+
+      - name: Cache Docker layers
+        uses: actions/cache@v2
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-northeast-2
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Build and push
+        id: docker-build
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: ${{ env.ECR_REPO_URL }}${{ env.APP_IMAGE}}:latest
+          file: ./docs/infra/app/app.Dockerfile
+          build-args: |
+            FITPET_ENV=${{ env.FITPET_ENV }}
+            AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache-new
+
+      - name: Move cache
+        run: |
+          rm -rf /tmp/.buildx-cache
+          mv /tmp/.buildx-cache-new /tmp/.buildx-cache
+
+  deploy-backend-rc:
+    runs-on: ubuntu-latest
+    needs:
+      - build-nginx-rc
+      - build-backend-rc
+    env:
+      PROJECT_NAME: service-fm-backend-rc
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-northeast-2
+
+      - name: Install ecs cli
+        uses: marocchino/setup-ecs-cli@v1
+        with:
+          version: "latest"
+
+      - name: Deploy
+        run: aws ecs update-service --cluster "${CLUSTER}" --service "${PROJECT_NAME}" --force-new-deployment
+
+  notify-slack-after-deploy:
+    runs-on: ubuntu-latest
+    needs:
+      - deploy-backend-rc
+    steps:
+      - uses: actions/checkout@v2
+      - name: Slack notify
+        if: always()
+        env:
+          TARGET: fitpetmall-backend
+          COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+          STATUS: ${{ job.status }}
+          PERIOD: finish
+          SLACK_WEBHOOK_DEPLOY_URL: ${{ secrets.SLACK_WEBHOOK_DEPLOY_URL }}
+        run: sh docs/infra/script/slack_deploy_notify.sh
