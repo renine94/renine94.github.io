@@ -1,0 +1,119 @@
+name: fitpetmall-backend-action-rc
+
+on:
+  push:
+    branches: [rc]
+
+concurrency:
+  group: deploy_rc
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    # needs: which_branch
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Extract branch name on push
+        if: github.event_name != 'pull_request'
+        run: |
+          echo "BRANCH_NAME=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
+
+      - name: Extract branch name on pull request
+        if: github.event_name == 'pull_request'
+        run: |
+          echo "BRANCH_NAME=${GITHUB_BASE_REF}" >> $GITHUB_ENV
+
+      - name: Labeling ecr repository
+        run: |
+          echo "ECR_NAME=fitpetmall-backend-${BRANCH_NAME}" >> "$GITHUB_ENV"
+
+      - name: Print Label
+        run: echo "ECR_NAME is...${{ env.ECR_NAME }}"
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.PROD_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.PROD_AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-northeast-2
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Build, tag, and push the image to Amazon ECR
+        id: build-image
+        uses: docker/build-push-action@v2
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          IMAGE_TAG: ${{ github.run_number }}
+
+        with:
+          context: .
+          push: true
+          tags: ${{ env.ECR_REGISTRY }}/${{env.ECR_NAME}}:${{env.IMAGE_TAG }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Extract branch name on push
+        if: github.event_name != 'pull_request'
+        run: |
+          echo "BRANCH_NAME=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
+
+      - name: Extract branch name on pull request
+        if: github.event_name == 'pull_request'
+        run: |
+          echo "BRANCH_NAME=${GITHUB_BASE_REF}" >> $GITHUB_ENV
+
+      - name: Print branch name
+        run: echo "Branch name in deploy...${{ env.BRANCH_NAME }}"
+
+      - name: Setup Kustomize
+        uses: imranismail/setup-kustomize@v1
+
+      - name: Checkout kustomize repository
+        uses: actions/checkout@v3
+        with:
+          repository: FitpetKorea/manifest-k8s-fitpet-cluster
+          token: ${{ secrets.ACTION_TOKEN }}
+          path: manifest-k8s-fitpet-cluster
+
+      - name: Labeling ecr repository
+        run: |
+          echo "ECR_NAME=fitpetmall-backend-${BRANCH_NAME}" >> "$GITHUB_ENV"
+
+      - name: Update Kubernetes resources
+        env:
+          IMAGE_TAG: ${{ github.run_number }}
+
+        run: |
+          echo "IMAGE_TAG : $IMAGE_TAG"
+          echo "BRANCH_NAME : ${{ env.BRANCH_NAME }}"
+          echo "ECR_NAME: $ECR_NAME"
+          cd manifest-k8s-fitpet-cluster/fitpetmall-backend/$BRANCH_NAME
+          kustomize edit set image 895867684285.dkr.ecr.ap-northeast-2.amazonaws.com/$ECR_NAME:$IMAGE_TAG
+          cat kustomization.yml
+
+      - name: Commit files
+        env:
+          IMAGE_TAG: ${{ github.run_number }}
+        run: |
+          cd manifest-k8s-fitpet-cluster
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "github-actions"
+          git commit -am "Update image tag : $IMAGE_TAG"
+          git push
