@@ -1,6 +1,13 @@
 """
 ES 에 multi_match 쿼리에 대해 알아보자.
 참고블로그 : https://jangseongwoo.github.io/elasticsearch/elasticsearch_multi_match/
+
+# multi_match
+- type
+1. `base_fields`: (Default) 모든 Field에 대해 Match되는 Field를 찾는다. 가장 잘 Match되는 1개의 Field를 기준으로 Score를 계산한다.
+2. `mast_fields`: 모든 Field에 대해 Match되는 각 각의 field에 대해 점수를 계산하고 모두 합한다. 합한 점수를 field 개수로 나눠서 최종 스코어를 계산한다.
+3. ... 위 링크 참고
+
 """
 
 # GET {index}/_search
