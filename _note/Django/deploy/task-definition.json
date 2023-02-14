@@ -1,0 +1,41 @@
+{
+  "family": "my-django-app",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "name": "web",
+      "image": "123456789012.dkr.ecr.us-east-1.amazonaws.com/my-django-app:latest",
+      "portMappings": [
+        {
+          "containerPort": 8000,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true
+    },
+    {
+      "name": "nginx",
+      "image": "nginx:latest",
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true
+    }
+  ],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "256",
+  "memory": "512",
+  "executionRoleArn": "arn:aws:iam::123456789012:role/my-task-execution-role",
+  "taskRoleArn": "arn:aws:iam::123456789012:role/my-task-role",
+  "tags": [
+    {
+      "key": "my-tag",
+      "value": "my-value"
+    }
+  ]
+}
