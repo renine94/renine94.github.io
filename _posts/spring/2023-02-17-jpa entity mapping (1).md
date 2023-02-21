@@ -126,11 +126,11 @@ DDL 생성 기능은 DDL을 생성할 때만 사용되고 JPA의 실행 로직�
 
 ```python
 class User(models.Model):
-		name = models.CharField()
-		age = models.CharFields()
+  name = models.CharField()
+  age = models.CharFields()
 
-		class Meta:
-				unique_together = ("name", "age")
+  class Meta:
+    unique_together = ("name", "age")
 
 ```
 
