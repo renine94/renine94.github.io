@@ -28,6 +28,7 @@ sidebar:
 ---
 
 # JPA - 즉시로딩과 지연로딩
+> [관련 포스팅 추가자료 첨부](https://wwlee94.github.io/category/blog/spring-jpa-n+1-query/)
 
 - Team(1), Member(N) 관계에 테이블이 있다.
 - **Member 를 조회할때, 꼭 Team 정보를 같이 가져와야 할까?**
