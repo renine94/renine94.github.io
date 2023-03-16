@@ -186,6 +186,46 @@ public class Member extends BaseEntity {
 
 
 
+<br><br>
+
+---
+
+# Django 와 비교
+
+- 위에서 배운 내용을 Django 에서 정의한다면 아래와 같이 될 것이다.
+
+```python
+class BaseModel(models.Model):
+  class Meta:
+    abstract = True
+  
+  created_at = ...
+  updated_at = ...
+  
+  
+class BaseWorkModel(models.Model):
+  class Meta:
+    abstract = True
+  
+  started_at = ...
+  ended_at = ...
+  
+  
+class BaseAddressModel(models.Model):
+  class Meta:
+    abstract = True
+  
+  city = ...
+  street = ...
+  zipcode = ...
+  
+  
+class User(BaseModel, BaseWorkModel, BaseAddressModel, models.Model):
+  ...
+```
+
+
+
 
 
 
