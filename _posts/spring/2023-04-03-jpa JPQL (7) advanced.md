@@ -11,10 +11,10 @@ header:
       url: "https://github.com/renine94"
 
 title: "[spring] 스프링 JPA 객체지향 쿼리언어 JPQL 고급 - 경로표현식"
-excerpt: "🚀 spring, JPA, JPQL, 객체그래프 탐색, 연관테이블 데이터 탐색하기, Django와 비교 포스팅"
+excerpt: "🚀 spring, JPA, JPQL, 객체그래프 탐색, 연관테이블 데이터 탐색, Django비교 포스팅, 명시적&묵시적 조인"
 
 categories: spring
-tag: [spring, model, jpa, jpql, graph]
+tag: [spring, model, jpa, jpql, graph, join]
 
 toc: true
 toc_label: "📕 목차"
