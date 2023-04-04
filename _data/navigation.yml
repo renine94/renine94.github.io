@@ -33,6 +33,10 @@ docs:
         url: /aws/
         category: "/aws/"
 
+      - title: "devops"
+        url: /devops/
+        category: "/devops/"
+
       - title: "elasticSearch"
         url: /elasticSearch/
         category: "/elasticSearch/"
