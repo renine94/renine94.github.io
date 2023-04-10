@@ -98,9 +98,7 @@ WHERE
 >
 > Django 에서도 article__user 더블 언더스코어로 다른 연관객체에 데이터에 접근할 수 있고, 묵시적 조인이 발생하는점이 비슷하다.
 
-
-
- ## 04. 상태 필드 경로 탐색
+## 04. 상태 필드 경로 탐색
 
 - JPQL
   - `SELECT m.username, m.age FROM Member m`
@@ -154,6 +152,7 @@ SELECT o.member.team FROM Order o
 
 -- 2
 SELECT t.members FROM Team
+
 
 -- 3
 SELECT m.username FROM TEAM t join t.members m
