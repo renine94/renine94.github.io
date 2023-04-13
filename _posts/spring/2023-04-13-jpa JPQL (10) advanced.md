@@ -11,7 +11,7 @@ header:
       url: "https://github.com/renine94"
 
 title: "[spring] 스프링 JPA 객체지향 쿼리언어 JPQL 고급 - 엔티티 직접 사용"
-excerpt: "🚀 spring, JPA, JPQL, 페치조인, 성능최적화, Django와 비교"
+excerpt: "🚀 spring, JPA, JPQL, 페치조인, 성능최적화, Named Query, Bulk 연산, Django비교"
 
 categories: spring
 tag: [spring, model, jpa, jpql, join, fetch]
