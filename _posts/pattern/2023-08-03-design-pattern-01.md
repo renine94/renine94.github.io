@@ -10,8 +10,8 @@ header:
     - label: "Github"
       url: "https://github.com/renine94"
 
-title: "[pattern] 디자인패턴(1)"
-excerpt: "🚀 디자인패턴의 기초 개념에 대해 알아보자."
+title: "[pattern] 디자인패턴(1) - 생성, 구조, 행동"
+excerpt: "🚀 디자인패턴의 기초와 무엇들이 있는지 알아보자."
 
 categories: pattern
 tag: [pattern, design]
@@ -61,31 +61,3 @@ sidebar:
 9. Strategy
 10. Template Method
 11. Visitor
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
