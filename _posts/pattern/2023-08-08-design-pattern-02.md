@@ -24,7 +24,7 @@ toc_sticky: true
 sidebar:
   nav: "docs"
 ---
-# 02. SRP (Single Responsibility Principle)
+# 01. SRP (Single Responsibility Principle)
 > 관심사의 분리 SOC (separation of concerns) 랑 뭔가 비슷한 느낌.
 
 - 클래스가 있는 경우, 클래스는 무엇을 하려는지 간에 주된 책임이 있어야 한다.
