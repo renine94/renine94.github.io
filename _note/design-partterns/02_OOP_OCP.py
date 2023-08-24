@@ -110,7 +110,7 @@ if __name__ == "__main__":
     for p in pf.filter_by_color(products, Color.GREEN):
         print(f" - {p.name} is green")
 
-    print('--------------------------------')
+    print("--------------------------------")
 
     bf = BetterFilter()
 
