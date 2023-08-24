@@ -8,16 +8,25 @@ sidebar:
   nav: "docs"
 
 ---
+<div class="notice--danger">
+  <h1> 2023.08.25 </h1>
+  <ul>
+    <li> 오랜만에 근황입니다. 최근에 이직을 하면서 회사에 적응하느라 블로그 관리에 소홀했습니다. </li>
+    <li> AI 교육업으로 이직하면서, FastAPI + SQLAlchemy + Alembic + Async 개발스택을 적응하는 중입니다. </li>
+    <li> 새로 만들어진 팀이어서 그런지 프로젝트를 처음부터 세팅해나가는 재미가 있어요. (CI/CD도 처음부터 구축..) </li>
+    <li> 공부한것을 블로그에 흔적으로 남겨야 하는데, 이 핑계 저 핑계 대가면서 블로그 관리에 소홀해진점 반성중입니다.. ㅠㅠ </li>
+  </ul>
+</div>
+
 <div class="notice--success">
   <h1> 2023.01.09 </h1>
   <ul>
     <li> 최근에는 미루고 미뤄왔던 스프링부트 공부를 시작했습니다. 일단 인프런에 있는 김영한님 스프링핵심개념부터 시작하고있습니다. </li>
-    <li> 코딩애플 강사님의 Node.js(express) + MongoDB 로 웹사이트 만드는 영상을 "눈"으로만 한번 보고있습니다.<br>Django를 그나마 가장 오래 써서 그런지 처음부터 다 만들어야 하는 express 가 아직은 낯설게 느껴지네요. 미들웨어도 직접 만들고 폴더구조도 직접 짜야하는...</li>
-    <li> 올해목표는 SpringBoot 도 백엔드 언어를 전환하는것입니다. Django + Spring 까진 해두고 욕심내면 express나 nest.js 도 한번 다뤄보고 싶긴하네요.. </li>
-    <li>요새 일, 집, 운동, 여친 생활만 반복해서 살고있는데, 주말마저 공부를 하다보니... 문화생활을 잘 못하고 살다보니 가끔은 현타가 오네요.. 그래도 배우면서 이것저것 알아가는 기쁨 또한 달달한것 같습니다.</li>
+    <li> 코딩애플 강사님의 Node.js(express) + MongoDB 로 웹사이트 만드는 영상을 "눈"으로만 한번 보고있습니다.<br>Django를 그나마 가장 오래 써서 그런지 처음부터 다 만들어야 하는 express 가 아직은 낯설게 느껴지네요.<br> 미들웨어도 직접 만들고 폴더구조도 직접 짜야하는...</li>
+    <li> 올해목표는 SpringBoot(Java)로 백엔드 언어를 전환하는것입니다.<br> Django + Spring 까진 해두고 욕심내면 express나 nest.js 도 한번 다뤄보고 싶긴하네요.. </li>
+    <li>요새 일, 집, 운동, 여친 생활만 반복해서 살고있는데, 주말마저 공부를 하다보니...<br> 문화생활을 잘 못하고 살다보니 가끔은 현타가 오네요.. 그래도 배우면서 이것저것 알아가는 기쁨 또한 달달한것 같습니다.</li>
   </ul>
 </div>
-
 
 
 <div class="notice--danger">
@@ -42,7 +51,6 @@ sidebar:
 </div>
 
 
-
 <div class="notice--danger">
   <h1> 2022.06.29 </h1>
   <ul>
@@ -53,8 +61,6 @@ sidebar:
 </div>
 
 
-
-
 <div class="notice--success">
   <h1> 2022.05.22 </h1>
   <ul>
@@ -62,7 +68,6 @@ sidebar:
     <li> 제 소개는 좌측 Resume(이력서) 및 Github에 자세히 있습니다. </li>
   </ul>
 </div>
-
 
 
 <div class="notice--danger">
