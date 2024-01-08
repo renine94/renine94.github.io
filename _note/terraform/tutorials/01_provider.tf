@@ -8,7 +8,7 @@ resource "aws_vpc" "myVPC" {
 
 provider "kubernetes" {
   config_context_auth_info = "ops"
-  config_context_cluster = "myCluster"
+  config_context_cluster   = "myCluster"
 }
 
 resource "kubernetes_namespace" "my-first-namespace" {
