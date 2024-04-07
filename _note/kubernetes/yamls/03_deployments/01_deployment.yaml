@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: my-deployment-nginx
+
+spec:
+  # ReplicaSet 정의
+  replicas: 4
+  selector:
+    matchLabels:
+      app: my-pod-nginx-label  # 중요
+  # Pod 정의
+  template:
+    metadata:
+      name: my-pod-nginx
+      labels:
+        app: my-pod-nginx-label  # 중요
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
