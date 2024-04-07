@@ -47,12 +47,18 @@ docs:
         url: /typescript/
         category: "/typescript/"
 
-  - title: etc
+  - title: cs
     children:
+      - title: "algorithm"
+        url: /algorithm/
+        category: "/algorithm/"
+
       - title: "pattern"
         url: /pattern/
         category: "/pattern/"
 
+  - title: etc
+    children:
       - title: "book"
         url: /book/
         category: "/book/"
