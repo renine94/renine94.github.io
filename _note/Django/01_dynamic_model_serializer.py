@@ -9,9 +9,9 @@ class DynamicFieldsModelSerializer(ModelSerializer):
         # Instantiate the superclass normally
         super(DynamicFieldsModelSerializer, self).__init__(*args, **kwargs)
 
-        fields = self.context['request'].query_params.get('fields')
+        fields = self.context["request"].query_params.get("fields")
         if fields:
-            fields = fields.split(',')
+            fields = fields.split(",")
             # Drop any fields that are not specified in the `fields` argument.
             allowed = set(fields)
             existing = set(self.fields.keys())
